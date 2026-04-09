@@ -1,6 +1,4 @@
-# ======================================
-# Loan Prediction - Final Fixed Version
-# ======================================
+
 
 import pandas as pd
 import joblib
@@ -81,10 +79,10 @@ pipeline.fit(X_train, y_train)
 # 11. Evaluate
 y_pred = pipeline.predict(X_test)
 
-print("✅ Accuracy:", accuracy_score(y_test, y_pred))
+print("Accuracy:", accuracy_score(y_test, y_pred))
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 # 12. Save model (IMPORTANT)
 joblib.dump(pipeline, "loan_model.pkl")
 
-print("\n✅ Model saved as loan_model.pkl")
+print("\n Model saved as loan_model.pkl")
