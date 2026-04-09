@@ -9,7 +9,7 @@ model = joblib.load("loan_model.pkl")
 
 st.set_page_config(page_title="Loan Predictor", layout="centered")
 
-st.title("🏦 Loan Approval Prediction")
+st.title("Loan Approval Prediction")
 st.write("Fill details to check loan eligibility")
 
 # Sidebar input
@@ -44,7 +44,7 @@ input_data = pd.DataFrame({
 })
 
 # Show input
-st.write("### 📋 Input Data")
+st.write("###  Input Data")
 st.dataframe(input_data)
 
 # Predict
@@ -53,6 +53,6 @@ if st.button("Predict Loan Status"):
     probability = model.predict_proba(input_data)
 
     if prediction[0] == 1:
-        st.success(f"✅ Loan Approved (Confidence: {probability[0][1]*100:.2f}%)")
+        st.success(f" Loan Approved (Confidence: {probability[0][1]*100:.2f}%)")
     else:
-        st.error(f"❌ Loan Not Approved (Confidence: {probability[0][0]*100:.2f}%)")
+        st.error(f" Loan Not Approved (Confidence: {probability[0][0]*100:.2f}%)")
