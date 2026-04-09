@@ -132,8 +132,7 @@ The application provides:
 
 ## Author
 
-Your Name
-
+Jahnavi
 ---
 
 ## Notes
